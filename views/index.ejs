@@ -18,10 +18,6 @@
                             d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
                 </a>
-                <!-- <a href="#"
-                    class="inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    Learn more
-                </a> -->
             </div>
 
         </div>
@@ -36,57 +32,25 @@
 <!-- continent section -->
 <section class="bg-white dark:bg-gray-900">
     <h3 class="font-bold p-3 text-lg">Continent</h3>
-    <ul class="flex flex-row pl-3">
-        <li class="pr-3 ">
-            <div class="flex flex-col m-0">
-                <a href="#">
-                    <img src="/img/food-1.jpg" alt="" class="rounded transition ease-in-out hover:scale-105">
+    <ul class="flex flex-row pl-3 space-x-4">
+        <% for( let i=0; i < 4; i++ ) { %>
+            <li class="w-1/5 transition ease-in-out hover:scale-105">
+                <a href="#" class="flex flex-col m-0">
+                    <img src="/img/<%= continents[i].image %>" alt="" class="rounded h-[225px]">
+                    <p class="text-center text-blue-500 py-3">
+                        <%= continents[i].name %>
+                    </p>
                 </a>
-                <p class="text-center py-3">
-                    food
-                </p>
-            </div>
-        </li>
-        <li class="pr-3">
-            <div class="flex flex-col m-0">
-                <a href="#">
-                    <img src="/img/food-1.jpg" alt="" class="rounded transition ease-in-out hover:scale-105">
-                </a>
-                <p class="text-center py-3">
-                    food
-                </p>
-            </div>
-        </li>
-        <li class="pr-3">
-            <div class="flex flex-col m-0">
-                <a href="#">
-                    <img src="/img/food-1.jpg" alt="" class="rounded transition ease-in-out hover:scale-105">
-                </a>
-                <p class="text-center py-3">
-                    food
-                </p>
-            </div>
-        </li>
-        <li class="pr-3">
-            <div class="flex flex-col m-0">
-                <a href="#">
-                    <img src="/img/food-1.jpg" alt="" class="rounded transition ease-in-out hover:scale-105">
-                </a>
-                <p class="text-center py-3">
-                    food
-                </p>
-            </div>
-        </li>
-        <li class="pr-3">
-            <div class="flex flex-col m-0">
-                <a href="#">
-                    <img src="/img/food-1.jpg" alt="" class="rounded blur-[2px] transition ease-in-out hover:scale-105">
-                </a>
-                <p class="text-center py-3 text-blue-700">
-                    view all
-                </p>
-            </div>
-        </li>
+            </li>
+            <% } %>
+                <li class="w-1/5 transition ease-in-out hover:scale-105">
+                    <a href="/continent" class="flex flex-col m-0">
+                        <img src="/img/food-1.jpg" alt="" class="rounded h-[225px] blur-[2px]">
+                        <p class="text-center text-blue-500 py-3">
+                            view all
+                        </p>
+                    </a>
+                </li>
     </ul>
 </section>
 <!-- continent section ends -->
@@ -170,13 +134,19 @@
         </div>
     </div>
     <div class="pb-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Publish your recipe for free today</h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Publish your recipe for thousands of people to try out.</p>
+        <h1
+            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Publish your recipe for free today</h1>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Publish your
+            recipe for thousands of people to try out.</p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-zinc-950 hover:bg-black focus:ring-4 focus:ring-black dark:focus:ring-black-900">
+            <a href="#"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-zinc-950 hover:bg-black focus:ring-4 focus:ring-black dark:focus:ring-black-900">
                 Publish Recipe
-                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
             </a>
         </div>
